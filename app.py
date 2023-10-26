@@ -31,7 +31,7 @@ def preprocess(text):
     vectorizer = pickle.load(open("tfidf.pk", "rb"))
     process_text = vectorizer.transform([text])
 
-    model = pickle.load(open("lightgbm.pkl", "rb"))
+    model = pickle.load(open("lightGBM.pkl", "rb"))
     preds = model.predict(process_text)
 
     # returning the predictions
